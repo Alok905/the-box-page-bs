@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>The Box BS</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold d-flex flex-row align-items-center gap-1" href="#">
+                    <img src="./images/navbar/logo.svg" alt="" width="35">
+                    <span class="logo-text"><i>The</i>Box</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 ">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 ">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 ">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 ">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <section class="container-fluid position-relative d-flex flex-column justify-content-center gap-2 " id="hero">
+        <h1 class=" hero-heading h1 col-12 d-flex align-items-center justify-content-center justify-content-md-start">
+            Building things <br />
+            is our mission.
+        </h1>
+        <div class="hero-card w-100 mx-auto d-flex flex-column justify-content-center ">
+            <h5 class="text-white text-center ">Feature Projects</h5>
+            <p class="text-white text-center ">
+                The National University of <br />
+                Architecture
+            </p>
+            <div class="btn-group w-100 mt-auto bottom-0 d-flex" role="group" aria-label="Basic outlined example">
+                <button type="button"
+                    class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-white h-100 border-0 "><img
+                        src="./images/icons/arrow-left-solid.svg" alt="" class="h-100 "> Back</button>
+                <button type="button"
+                    class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-white h-100 border-0 ">Next
+                    <img src="./images/icons/arrow-right-solid.svg" alt="" class="h-100"> </button>
+            </div>
+        </div>
+    </section>
+    <section id="reason" class="container-fluid py-5 d-flex flex-column justify-content-between gap-4">
+        <h2 class="text-center fw-bold mb-3 ">Our Reputation</h2>
+        <div
+            class="reason-card-container mx-auto d-flex flex-column flex-md-row w-100 justify-content-between align-items-center gap-3 gap-md-4 ">
+            <div
+                class="reason-card p-3 border border-black w-100 d-flex flex-column align-items-start gap-1 gap-sm-3 justify-content-md-center">
+                <img src="./images/reasons/headphone.svg" alt="headphone">
+                <h2 class="mb-0 fw-semibold ">Best Services</h2>
+                <p class="flex-grow-1 mb-0 w-100">Nullam senectus porttitor in <br> eget. Eget rutrum leo interdum.</p>
+            </div>
+            <div class="reason-card p-3 border border-black w-100 d-flex flex-column align-items-start gap-1 gap-sm-3 ">
+                <img src="./images/reasons/headphone.svg" alt="headphone">
+                <h2 class="mb-0 fw-semibold ">Best Teams</h2>
+                <p class="flex-grow-1 mb-0 w-100">Cursus semper tellus volutpat <br> aliquet lacus.</p>
+            </div>
+            <div class="reason-card p-3 border border-black w-100 d-flex flex-column align-items-start gap-1 gap-sm-3 ">
+                <img src="./images/reasons/best_design.svg" alt="best design">
+                <h2 class="mb-0 fw-semibold ">Best Designs</h2>
+                <p class="flex-grow-1 mb-0 w-100">Ultricies at ipsum nunc, <br> tristique nam lectus.</p>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="container-fluid mx-auto">
+        <div class="about-container position-relative h-100 w-100">
+            <div class="about-text-container position-absolute h-100 w-100 text-white d-flex flex-column">
+                <h3 class="mb-0 fw-bold ">About Us</h3>
+                <p class="mb-0 fw-light ">
+                    For more than 30 years we have been delivering world-class construction and we’ve built many lasting
+                    relationships along the way.
+                    <br>
+                    <br>
+                    We’ve matured into an industry leader and trusted resource for those seeking quality, innovation and
+                    reliability when building in the U.S.
+                </p>
+                <button class="bg-white border-0 py-md-2 px-md-4 ">
+                    More on Our History
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="service" class="py-5 ">
+        <h2 class="text-center fw-bold ">Services</h2>
+        <div class="service-container container-sm">
+            <div class="service-card-container row">
+                <div class="service-card-outer col-12 col-md-6 col-lg-4 p-4">
+                    <div
+                        class="service-card-inner w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+
+                        <img src="./images/service/construction.svg" alt="construction" class="h-25 ">
+                        <span></span>
+                        <h4 class="m-0 ">Construction</h4>
+                    </div>
+                </div>
+                <div class="service-card-outer col-12 col-md-6 col-lg-4 p-4">
+                    <div
+                        class="service-card-inner w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+
+                        <img src="./images/service/renovation.svg" alt="renovation" class="h-25 ">
+                        <span></span>
+                        <h4 class="m-0 ">Renovation</h4>
+                    </div>
+                </div>
+                <div class="service-card-outer col-12 col-md-6 col-lg-4 p-4">
+                    <div
+                        class="service-card-inner w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+
+                        <img src="./images/service/consultation.svg" alt="construction" class="h-25 ">
+                        <span></span>
+                        <h4 class="m-0 ">Consultation</h4>
+                    </div>
+                </div>
+                <div class="service-card-outer col-12 col-md-6 col-lg-4 p-4">
+                    <div
+                        class="service-card-inner w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+
+                        <img src="./images/service/repair_services.svg" alt="repait services" class="h-25 ">
+                        <span></span>
+                        <h4 class="m-0 ">Repair Services</h4>
+                    </div>
+                </div>
+                <div class="service-card-outer col-12 col-md-6 col-lg-4 p-4">
+                    <div
+                        class="service-card-inner w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+
+                        <img src="./images/service/architecture.svg" alt="architecture" class="h-25 ">
+                        <span></span>
+                        <h4 class="m-0 ">Architecture</h4>
+                    </div>
+                </div>
+                <div class="service-card-outer col-12 col-md-6 col-lg-4 p-4">
+                    <div
+                        class="service-card-inner w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+
+                        <img src="./images/service/electric.svg" alt="electric" class="h-25 ">
+                        <span></span>
+                        <h4 class="m-0 ">Electric</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="container-md py-5">
+        <h2 class="fw-bold ">Projects</h2>
+        <div class="project-container row mx-auto ">
+            <div
+                class="projects-link-container col-12 col-md-4 border border-danger p-4 d-flex flex-row  flex-md-column  ">
+                <a href="#" class="active ps-0 ps-md-2 pb-1 pb-md-0 text-decoration-none fw-semibold">All</a>
+                <a href="#"
+                    class="ps-0 ps-md-2 pb-1 pb-md-0 text-decoration-none fw-semibold ms-3 ms-md-0 mt-0 mt-md-1 ">Commercial</a>
+                <a href="#"
+                    class="ps-0 ps-md-2 pb-1 pb-md-0 text-decoration-none fw-semibold ms-3 ms-md-0 mt-0 mt-md-1 ">Residential</a>
+            </div>
+            <div class="col-12 col-md-8 border border-danger p-4 row m-0">
+                <div class="project-card-outer col-12 col-md-6 border border-danger ">
+
+                </div>
+                <div class="project-card-outer col-12 col-md-6 border border-danger ">
+
+                </div>
+                <div class="project-card-outer col-12 col-md-6 border border-danger ">
+
+                </div>
+                <div class="project-card-outer col-12 col-md-6 border border-danger ">
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
