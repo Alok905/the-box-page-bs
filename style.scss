@@ -40,25 +40,11 @@
 
 @mixin setPosition($selector, $left, $right, $top, $bottom, $zindex) {
     #{$selector} {
-        // @if $left {
         left: $left;
         z-index: $zindex;
-        // }
-
-        // @if $right {
         right: $right;
-        // z-index: $zindex;
-        // }
-
-        // @if $top {
         top: $top;
-        // z-index: $zindex;
-        // }
-
-        // @if $bottom {
         bottom: $bottom;
-        // z-index: $zindex;
-        // }
     }
 }
 
@@ -372,7 +358,12 @@ body {
         .project-card-outer {
             aspect-ratio: 7/6;
 
-            .project-card-inner {
+            .project-card-inner { 
+                transition: all .1s ease;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.02) rotate(2deg);
+                }
                 .image-container {
                     img {
                         object-position: center;
