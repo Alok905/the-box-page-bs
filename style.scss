@@ -11,9 +11,9 @@
     --reason-box-description-color: #858ead;
     --service-bg-color: #f5f5f5;
     --service-image-border-bottom-stroke-color: #e0e3eb;
-    --stats-left-box-shadow-color: rgba(17, 24, 39, 10%);
+    --stats-diagram-box-shadow-color: rgba(17, 24, 39, 10%);
     --stat-left-description-color: #667299;
-    --stats-right-description-color: #cccccc;
+    --stats-text-description-color: #cccccc;
     --project-link-color: #c2c7d6;
     --project-card-pagination-bg-color: #f6f8f7;
     --form-section-bg-color: #f6f8f7;
@@ -30,6 +30,36 @@
     font-family: "Work Sans", sans-serif;
     border: none;
     text-decoration: none;
+}
+
+@mixin backgroundSet($url) {
+    background: url(#{$url});
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin setPosition($selector, $left, $right, $top, $bottom, $zindex) {
+    #{$selector} {
+        // @if $left {
+        left: $left;
+        z-index: $zindex;
+        // }
+
+        // @if $right {
+        right: $right;
+        // z-index: $zindex;
+        // }
+
+        // @if $top {
+        top: $top;
+        // z-index: $zindex;
+        // }
+
+        // @if $bottom {
+        bottom: $bottom;
+        // z-index: $zindex;
+        // }
+    }
 }
 
 body {
@@ -58,9 +88,7 @@ body {
 // Hero
 #hero {
     height: 85vh;
-    background: url(./images/hero/hero_bg.png);
-    background-size: cover;
-    background-position: center;
+    @include backgroundSet("./images/hero/hero_bg.png");
 
     .hero-heading {
         color: var(--very-dark-blue-color);
@@ -140,9 +168,7 @@ body {
 
     .about-container {
         aspect-ratio: 7/5;
-        background: url(./images/about/about-person.svg);
-        background-size: cover;
-        background-position: center;
+        @include backgroundSet("./images/about/about-person.svg");
 
         .about-text-container {
             background: #2947a9aa;
@@ -197,7 +223,11 @@ body {
             .service-card-inner {
                 background: #fff;
                 gap: 4%;
-
+                transition: all 0.2s ease;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
                 span {
                     width: 40%;
                     border: none;
@@ -216,8 +246,8 @@ body {
     .stats-container {
         max-width: 30rem;
 
-        .stats-left {
-            .stats-left-row {
+        .stats-diagram {
+            .stats-diagram-row {
 
                 .stats-card-outer {
                     aspect-ratio: 3/2;
@@ -262,7 +292,7 @@ body {
             }
         }
 
-        .stats-right {
+        .stats-text {
             // aspect-ratio: 1/1;
             max-width: 40rem;
 
@@ -272,7 +302,7 @@ body {
             }
 
             p {
-                color: var(--stats-right-description-color);
+                color: var(--stats-text-description-color);
                 font-size: min(3.6vw, 1.3rem);
             }
 
@@ -292,12 +322,18 @@ body {
 
 // Ads
 #ads {
-    background: url(./images/ads/ads_bg.svg);
-    height: min(35vh, 20rem);
+    @include backgroundSet("./images/ads/ads_bg.svg");
+    height: min(40vh, 20rem);
 
     .ads-container {
         .row {
-            .ads-right {
+            .ads-content {
+                p {
+                    font-size: min(3vw, 1.3rem);
+                }
+            }
+
+            .ads-button-container {
                 max-width: 17rem;
 
                 button {
@@ -311,6 +347,9 @@ body {
 
 // Project
 #projects {
+    .project-heading{
+        max-width: 30rem;
+    }
     .project-container {
         max-width: 30rem;
 
@@ -433,7 +472,7 @@ body {
 
 footer {
     .footer-container {
-        .footer-left-outer div {
+        .footer-content-outer div {
             &:last-child {
                 display: none;
             }
@@ -443,8 +482,8 @@ footer {
             }
         }
 
-        .footer-left-outer,
-        .footer-right-outer {
+        .footer-content-outer,
+        .footer-form-outer {
             div {
                 span {
                     font-size: min(3.5vw, 1rem);
@@ -473,8 +512,14 @@ footer {
             button,
             input::placeholder {
                 font-size: min(3vw, 1rem);
+            }
+            
+            input,
+            button{
                 padding: min(1vw, 0.7rem) min(1.5vw, 0.9rem);
             }
+
+            
         }
 
         .social-icon-container {
@@ -572,45 +617,35 @@ footer {
         .stats-container {
             max-width: 78rem;
 
-            .stats-left {
+            .stats-diagram {
                 height: 40rem !important;
                 max-width: 55rem;
 
 
-                .stats-left-row {
+                .stats-diagram-row {
                     height: 50%;
 
                     .stats-card-outer {
                         position: absolute;
 
-                        &.stats-card-84 {
-                            right: 7%;
-                            top: 0%;
-                            z-index: 2;
-                        }
-
-                        &.stats-card-123 {
-                            left: 10%;
-                            top: 7rem;
-                        }
-
-                        &.stats-card-37 {
-                            right: 14%;
-                            top: -23%;
-                            z-index: 2;
-                        }
+                        @include setPosition("&.stats-card-84", null, 7%, 0, null, 2);
+                        @include setPosition("&.stats-card-123", 10%, null, 7rem, null, 1);
+                        @include setPosition("&.stats-card-37", null, 14%, -23%, null, 2);
+                        @include setPosition("&.stats-card-30", 14%, null, 2%, null, 1);
 
                         &.stats-card-30 {
-                            left: 14%;
-                            top: 2rem;
+                            .stats-card-inner img {
+                                left: unset;
+                                top: unset;
+                                right: -8%;
+                                bottom: -12%;
+                            }
                         }
 
                         .stats-card-inner {
-
                             background: #fff;
 
                             h2 {
-
                                 font-size: min(6.5vw, 2.5rem);
                             }
 
@@ -633,6 +668,9 @@ footer {
     }
 
     #projects {
+        .project-heading{
+            max-width: 60rem;
+        }
         .project-container {
             max-width: 60rem;
 
@@ -682,14 +720,14 @@ footer {
         .footer-container {
             max-width: 90rem;
 
-            .footer-left-outer div {
+            .footer-content-outer div {
                 &:last-child {
                     display: flex;
                 }
             }
 
-            .footer-left-outer,
-            .footer-right-outer {
+            .footer-content-outer,
+            .footer-form-outer {
                 div {
                     span {
                         font-size: min(1.8vw, 1.3rem);
@@ -697,13 +735,17 @@ footer {
                 }
             }
 
-            .footer-right-outer {
+            .footer-form-outer {
 
                 input,
                 button,
                 input::placeholder {
                     font-size: min(1.8vw, 1.3rem);
+                }
+                input,
+                button{
                     padding: min(1vw, 0.7rem) min(1.5vw, 0.9rem);
+
                 }
             }
         }
@@ -740,30 +782,15 @@ footer {
         .stats-container {
             max-width: 68rem;
 
-            .stats-left {
+            .stats-diagram {
                 margin: 0 !important;
 
-                .stats-left-row {
+                .stats-diagram-row {
                     .stats-card-outer {
-                        &.stats-card-84 {
-                            right: 13%;
-                            top: 10%;
-                        }
-
-                        &.stats-card-123 {
-                            left: 10%;
-                            top: 45%;
-                        }
-
-                        &.stats-card-37 {
-                            right: 16%;
-                            top: -17%;
-                        }
-
-                        &.stats-card-30 {
-                            left: 14%;
-                            top: 23%;
-                        }
+                        @include setPosition("&.stats-card-84", null, 13%, 10%, null, 2);
+                        @include setPosition("&.stats-card-123", 10%, null, 45%, null, 1);
+                        @include setPosition("&.stats-card-37", null, 16%, -17%, null, 2);
+                        @include setPosition("&.stats-card-30", 14%, null, 23%, null, 1);
 
                         .stats-card-inner {
                             h2 {
@@ -777,6 +804,17 @@ footer {
                             }
                         }
                     }
+                }
+            }
+
+            .stats-text {
+                h2 {
+                    font-size: min(3vw, 4rem);
+                }
+
+                p {
+
+                    font-size: min(3.6vw, .9rem);
                 }
             }
         }
