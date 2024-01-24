@@ -64,9 +64,12 @@ body {
   font-size: min(10vw, 3.7rem);
 }
 #hero .hero-card {
-  max-width: 18rem;
+  max-width: min(90%, 18rem);
   aspect-ratio: 7/4;
   background: var(--home-card-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #hero .hero-card h5 {
   margin-top: 5%;
@@ -185,47 +188,47 @@ body {
   font-size: min(6vw, 1.7rem);
 }
 
-#stats .stats-container {
-  max-width: 30rem;
+#stats {
+  max-width: 26rem;
 }
-#stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer {
+#stats .stats-diagram .stats-diagram-row .stats-card-outer {
   aspect-ratio: 3/2;
 }
-#stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer:first-of-type img {
+#stats .stats-diagram .stats-diagram-row .stats-card-outer:first-of-type img {
   height: 30%;
   right: -11%;
   top: -10%;
 }
-#stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer:last-of-type img {
+#stats .stats-diagram .stats-diagram-row .stats-card-outer:last-of-type img {
   height: 30%;
   left: -7%;
   top: -10%;
 }
-#stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner {
+#stats .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner {
   padding-left: min(3vw, 1.4rem);
   box-shadow: 0 12px 16px rgba(17, 24, 39, 0.1), 0 4px 6px rgba(17, 24, 39, 0.05);
 }
-#stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner h2 {
-  font-size: min(13vw, 4rem);
+#stats .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner h2 {
+  font-size: min(13vw, 3.5rem);
 }
-#stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner p {
+#stats .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner p {
   margin-left: min(5vw, 1rem) !important;
   padding-left: min(4vw, 1rem) !important;
   border-left: 4px solid var(--orange-color);
-  font-size: min(5vw, 1.3rem);
+  font-size: min(5vw, 1.1rem);
 }
-#stats .stats-container .stats-text {
+#stats .stats-text {
   max-width: 40rem;
 }
-#stats .stats-container .stats-text h2 {
+#stats .stats-text h2 {
   color: var(--dark-blue-color);
   font-size: min(16vw, 2.3rem);
 }
-#stats .stats-container .stats-text p {
+#stats .stats-text p {
   color: var(--stats-text-description-color);
   font-size: min(3.6vw, 1.3rem);
 }
-#stats .stats-container .stats-text a {
+#stats .stats-text a {
   font-size: min(3.2vw, 1.1rem);
   text-decoration: none;
   color: #fff;
@@ -241,7 +244,7 @@ body {
   height: min(40vh, 20rem);
 }
 #ads .ads-container .row .ads-content p {
-  font-size: min(3vw, 1.3rem);
+  font-size: min(4.7vw, 1.3rem);
 }
 #ads .ads-container .row .ads-button-container {
   max-width: 17rem;
@@ -289,7 +292,7 @@ body {
   font-size: min(4vw, 1.5rem);
 }
 #projects .projects-cards-container .project-card-outer .project-card-inner .description p {
-  font-size: min(2vw, 0.9rem);
+  font-size: min(3vw, 0.9rem);
 }
 #projects .projects-cards-container .project-naviagation-outer {
   height: min(5vh, 2.5rem);
@@ -404,8 +407,9 @@ footer .copyright p {
     padding: 3vw;
   }
   #hero .hero-card {
-    position: absolute;
     right: 5%;
+    left: unset;
+    transform: unset;
     bottom: 0;
   }
   #reason .reason-card-container {
@@ -450,53 +454,57 @@ footer .copyright p {
   #service .service-container .service-card-container .service-card-outer .service-card-inner h4 {
     font-size: min(4vw, 1.4rem);
   }
-  #stats .stats-container {
-    max-width: 78rem;
+  #stats {
+    max-width: 50rem;
   }
-  #stats .stats-container .stats-diagram {
+  #stats .stats-diagram {
     height: 40rem !important;
     max-width: 55rem;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row {
+  #stats .stats-diagram .stats-diagram-row {
     height: 50%;
+    bottom: 7%;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer {
+  #stats .stats-diagram .stats-diagram-row:first-of-type {
+    top: 7%;
+  }
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer {
     position: absolute;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-84 {
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-84 {
     z-index: 2;
-    right: 7%;
-    top: 0;
+    right: 9%;
+    top: -5%;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-123 {
-    left: 10%;
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-123 {
+    left: 9%;
     z-index: 1;
-    top: 7rem;
+    bottom: -9%;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-37 {
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-37 {
     z-index: 2;
-    right: 14%;
-    top: -23%;
+    right: 9%;
+    top: -5%;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-30 {
-    left: 14%;
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-30 {
+    left: 9%;
     z-index: 1;
-    top: 2%;
+    bottom: -9%;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-30 .stats-card-inner img {
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-30 .stats-card-inner img {
     left: unset;
     top: unset;
     right: -8%;
     bottom: -12%;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner {
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner {
     background: #fff;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner h2 {
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner h2 {
     font-size: min(6.5vw, 2.5rem);
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner p {
-    font-size: min(2vw, 1.4rem);
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner p {
+    font-size: min(2vw, 1rem);
   }
   #ads .ads-container {
     max-width: 65rem;
@@ -520,7 +528,7 @@ footer .copyright p {
     font-size: min(2vw, 1.2rem);
   }
   #projects .project-container .projects-cards-container .project-card-outer .project-card-inner .description p {
-    font-size: min(1vw, 0.8rem);
+    font-size: min(1.4vw, 0.8rem);
   }
   #projects .project-container .projects-cards-container .project-naviagation-outer {
     height: 3rem;
@@ -573,44 +581,44 @@ footer .copyright p {
   .service-card-outer .about-text-container button {
     font-size: min(3.3vw, 0.9rem);
   }
-  #stats .stats-container {
+  #stats {
     max-width: 68rem;
   }
-  #stats .stats-container .stats-diagram {
+  #stats .stats-diagram {
     margin: 0 !important;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-84 {
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-84 {
     z-index: 2;
     right: 13%;
-    top: 10%;
+    top: 3%;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-123 {
-    left: 10%;
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-123 {
+    left: 13%;
     z-index: 1;
-    top: 45%;
+    bottom: 3%;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-37 {
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-37 {
     z-index: 2;
-    right: 16%;
-    top: -17%;
+    right: 13%;
+    top: 3%;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-30 {
-    left: 14%;
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer.stats-card-30 {
+    left: 13%;
     z-index: 1;
-    top: 23%;
+    bottom: 3%;
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner h2 {
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner h2 {
     font-size: min(6.5vw, 2.3rem);
   }
-  #stats .stats-container .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner p {
+  #stats .stats-diagram .stats-diagram-row .stats-card-outer .stats-card-inner p {
     margin-left: min(2vw, 0.8rem) !important;
     padding-left: min(2vw, 0.8rem) !important;
     font-size: min(2vw, 0.9rem);
   }
-  #stats .stats-container .stats-text h2 {
-    font-size: min(3vw, 4rem);
+  #stats .stats-text h2 {
+    font-size: min(5vw, 4rem);
   }
-  #stats .stats-container .stats-text p {
+  #stats .stats-text p {
     font-size: min(3.6vw, 0.9rem);
   }
 }/*# sourceMappingURL=style.css.map */
