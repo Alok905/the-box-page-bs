@@ -73,9 +73,12 @@ body {
 }
 #hero .hero-card h5 {
   margin-top: 5%;
+  flex: 1;
+  font-size: min(5vw, 1rem);
 }
 #hero .hero-card p {
   font-size: min(5vw, 1rem);
+  flex: 1;
 }
 #hero .hero-card .btn-group {
   border-radius: 0;
@@ -98,7 +101,7 @@ body {
   -webkit-text-stroke: 1px black;
 }
 #reason .reason-card-container {
-  max-width: 70rem;
+  max-width: 60rem;
 }
 #reason .reason-card-container .reason-card {
   max-width: 25rem;
@@ -313,10 +316,22 @@ body {
 #contact {
   background: var(--service-bg-color);
 }
+#contact .contact-container br {
+  display: none;
+}
+@media (min-width: 500px) {
+  #contact .contact-container br {
+    display: inline-block;
+  }
+}
 #contact .contact-container form {
   max-width: 50rem;
 }
 #contact .contact-container form input {
+  border: 1.5px solid var(--form-input-border-color);
+}
+#contact .contact-container form input:focus,
+#contact .contact-container form textarea:focus {
   border: 1.5px solid var(--form-input-border-color);
 }
 #contact .contact-container form label {
@@ -416,10 +431,10 @@ footer .copyright p {
     gap: min(2vw, 1rem);
   }
   #reason .reason-card-container .reason-card h2 {
-    font-size: min(3vw, 1.7rem);
+    font-size: min(3vw, 1.3rem);
   }
   #reason .reason-card-container .reason-card p {
-    font-size: min(1.2vw, 0.9rem);
+    font-size: min(1.4vw, 1rem);
   }
   #about {
     max-width: 65rem;
@@ -452,7 +467,7 @@ footer .copyright p {
     order: 4;
   }
   #service .service-container .service-card-container .service-card-outer .service-card-inner h4 {
-    font-size: min(4vw, 1.4rem);
+    font-size: min(4vw, 1.2rem);
   }
   #stats {
     max-width: 50rem;
@@ -621,4 +636,8 @@ footer .copyright p {
   #stats .stats-text p {
     font-size: min(3.6vw, 0.9rem);
   }
+}
+.border-radius-3px,
+input {
+  border-radius: 3px !important;
 }/*# sourceMappingURL=style.css.map */

@@ -92,10 +92,13 @@ body {
     transform: translateX(-50%);
     h5 {
       margin-top: 5%;
+      flex: 1;
+      font-size: min(5vw, 1rem);
     }
 
     p {
       font-size: min(5vw, 1rem);
+      flex: 1;
     }
 
     .btn-group {
@@ -126,7 +129,7 @@ body {
   }
 
   .reason-card-container {
-    max-width: 70rem;
+    max-width: 60rem;
 
     .reason-card {
       max-width: 25rem;
@@ -410,10 +413,20 @@ body {
   background: var(--service-bg-color);
 
   .contact-container {
+    br {
+      display: none;
+      @media (min-width: 500px) {
+        display: inline-block;
+      }
+    }
     form {
       max-width: 50rem;
 
       input {
+        border: 1.5px solid var(--form-input-border-color);
+      }
+      input:focus,
+      textarea:focus {
         border: 1.5px solid var(--form-input-border-color);
       }
 
@@ -517,7 +530,6 @@ footer {
     }
   }
 }
-
 @media (min-width: 768px) {
   #hero {
     .hero-heading {
@@ -538,11 +550,11 @@ footer {
 
       .reason-card {
         h2 {
-          font-size: min(3vw, 1.7rem);
+          font-size: min(3vw, 1.3rem);
         }
 
         p {
-          font-size: min(1.2vw, 0.9rem);
+          font-size: min(1.4vw, 1rem);
         }
       }
     }
@@ -588,7 +600,7 @@ footer {
         }
 
         .service-card-inner h4 {
-          font-size: min(4vw, 1.4rem);
+          font-size: min(4vw, 1.2rem);
         }
       }
     }
@@ -793,4 +805,9 @@ footer {
       }
     }
   }
+}
+
+.border-radius-3px,
+input {
+  border-radius: 3px !important;
 }
