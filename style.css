@@ -256,6 +256,9 @@ body {
   border: 2px solid #fff;
   background: transparent;
 }
+#ads .ads-container .row .ads-button-container button:hover {
+  box-shadow: 0 0 10px #fff inset;
+}
 
 #projects .project-heading {
   max-width: 30rem;
